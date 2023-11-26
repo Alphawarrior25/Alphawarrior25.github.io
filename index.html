@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moore Value</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Moore Value Cricket</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#live-scores">Live Scores</a></li>
+        <li><a href="#upcoming-matches">Upcoming Matches</a></li>
+        <li><a href="#player-rankings">Player Rankings</a></li>
+        <li><a href="#team-stats">Team Stats</a></li>
+        <li><a href="#cricket-news">Cricket News</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="column left">
+      <section id="donate-kit" class="info-box">
+        <h2>Donate Kit</h2>
+        <div class="content hidden">
+          <!-- Add donation form here -->
+        </div>
+      </section>
+      <section id="buy-receive-kit" class="info-box">
+        <h2>Buy or Receive Refurbished Kit</h2>
+        <div class="content hidden">
+          <!-- Add application form here -->
+        </div>
+      </section>
+      <section id="stock-near-me" class="info-box">
+        <h2>Stock Near Me</h2>
+        <div class="content hidden">
+          <!-- Add map placeholder here -->
+        </div>
+      </section>
+      <section id="cricket-events" class="info-box">
+        <h2>Cricket Events</h2>
+        <div class="content hidden">
+          <!-- Content for cricket events -->
+        </div>
+      </section>
+      <section id="player-spotlight" class="info-box">
+        <h2>Player Spotlight</h2>
+        <div class="content hidden">
+          <!-- Content for player spotlight -->
+        </div>
+      </section>
+    </div>
+
+    <div class="column right">
+      <section id="training-tips" class="info-box">
+        <h2>Training Tips</h2>
+        <div class="content hidden">
+          <!-- Content for training tips -->
+        </div>
+      </section>
+      <section id="match-highlights" class="info-box">
+        <h2>Match Highlights</h2>
+        <div class="content hidden">
+          <!-- Content for match highlights -->
+        </div>
+      </section>
+      <section id="team-rankings" class="info-box">
+        <h2>Team Rankings</h2>
+        <div class="content hidden">
+          <!-- Content for team rankings -->
+        </div>
+      </section>
+      <section id="fan-zone" class="info-box">
+        <h2>Fan Zone</h2>
+        <div class="content hidden">
+          <!-- Content for fan zone -->
+        </div>
+      </section>
+      <section id="cricket-gear" class="info-box">
+        <h2>Cricket Gear</h2>
+        <div class="content hidden">
+          <!-- Content for cricket gear -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Moore Value Cricket</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Modal for Donate Kit -->
+  <div id="donateModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3>Donate a Kit</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Place" required>
+        <input type="text" placeholder="Contact Details" required>
+        <select name="item" required>
+          <option value="">Select Item to Donate</option>
+          <option value="helmet">Helmet</option>
+          <option value="bat">Bat</option>
+          <option value="pad">Pad</option>
+          <option value="clothing">Clothing</option>
+          <option value="shoes">Shoes</option>
+        </select>
+        <button type="submit">Submit Donation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Buy or Receive Refurbished Kit -->
+  <div id="buyReceiveModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('buyReceiveModal')">&times;</span>
+      <h3>Buy or Receive Refurbished Kit</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Address" required>
+        <select name="kitType" required>
+          <option value="">Select Kit Type</option>
+          <option value="helmet">Helmet</option>
+          <option value="bat">Bat</option>
+          <option value="pad">Pad</option>
+          <option value="clothing">Clothing</option>
+          <option value="shoes">Shoes</option>
+        </select>
+        <textarea placeholder="Reason for Application" required></textarea>
+        <div class="direct-buy">
+          <input type="checkbox" id="directBuy" name="directBuy">
+          <label for="directBuy">Direct Buy</label>
+        </div>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+  </div>
+  <!-- Modal for Player Spotlight -->
+  <div id="playerSpotlightModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('playerSpotlightModal')">&times;</span>
+      <h2 id="potw">Player of the Week</h2>
+      <img id="playa" src="https://i.imgur.com/ocfzidO.jpg" alt="Player">
+      <!-- You can add more content here if needed -->
+    </div>
+  </div>
+  <!-- for Stock Near Me -->
+  <div id="stockModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('stockModal')">&times;</span>
+      <h3 id="potw">Stock Near Me</h3>
+      <form>
+        <input type="text" placeholder="Enter Your Location" required>
+        <button type="submit">Find Stock</button>
+      </form>
+      <img id="map" src="https://static.vecteezy.com/system/resources/previews/020/833/849/original/world-map-with-country-names-free-vector.jpg" alt="World Map"> <!-- Replace with actual path to your world map image -->
+    </div>
+  </div>
+</body>
+</html>
